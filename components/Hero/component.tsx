@@ -19,7 +19,7 @@ export const Hero: FC = () => {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold md:mt-8 md:mb-2 md:text-5xl text-white-900">
+      <h1 className="text-4xl font-bold md:mt-40 md:mb-2 md:text-5xl text-white-900">
         Save the world from COVID-19
       </h1>
       <div>

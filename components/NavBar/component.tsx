@@ -3,12 +3,14 @@ import clsx from "clsx";
 import { LogoIcon } from "components";
 import { TARGET_CHAIN } from "config";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FC, useCallback, useMemo } from "react";
 
 import { Props } from "./props";
 
 export const NavBar: FC<Props> = ({ className }: Props) => {
   const { activateBrowserWallet, chainId, account } = useEthers();
+  const router = useRouter();
 
   const handleConnectClick = useCallback(() => {
     if (!account) {
@@ -27,18 +29,20 @@ export const NavBar: FC<Props> = ({ className }: Props) => {
   return (
     <div
       className={clsx(
-        "flex items-center justify-between mt-8 mb-40",
+        "flex items-center justify-between mt-8 mb-20",
         className
       )}
     >
-      <Link href="/about">
+      <Link href="/">
         <a>
           <LogoIcon className="w-10 mb-2 fill-current text-white-900" />
         </a>
       </Link>
       <div className="flex items-center">
-        <Link href="/about">
-          <a className="text-white-900">How this works?</a>
+        <Link href={router.pathname === "/about" ? "/" : "/about"}>
+          <a className="text-white-900">
+            {router.pathname === "/about" ? "Main page" : "How this works?"}
+          </a>
         </Link>
         <button
           className={clsx(

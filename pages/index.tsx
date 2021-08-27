@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 import client from "apollo-client";
-import { Donate, Hero, History, NavBar } from "components";
+import { Donate, Hero, History } from "components";
 import type { Transfer } from "config";
 import React from "react";
 
@@ -11,7 +11,6 @@ type Props = {
 const IndexPage = (props: Props) => {
   return (
     <div>
-      <NavBar />
       <Hero />
       <Donate />
       <History {...props} />
