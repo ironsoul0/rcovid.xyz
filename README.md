@@ -1,41 +1,45 @@
-# TypeScript Next.js example
+<h1 align="center">
+  rcovid.xyz
+</h1>
+<p align="center">
+   Built with <a href="https://www.nextjs.org/" target="_blank">Next.js</a> and hosted with <a href="https://www.vercel.com/" target="_blank">Vercel</a>
+</p>
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+![demo](./public/screen.png)
 
-## Deploy your own
+## 🛠 Wanna fork and create your own version?
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+1. Clone the project
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+   ```sh
+   git clone https://github.com/ironsoul0/rcovid.xyz
+   ```
 
-## How to use it?
+2. Fill in the environmental variables. `.env.sample` is a sample file you can follow.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+  ```sh
+  NEXT_PUBLIC_INFURA_ID=f40be16d787e47168253bf632e6a7bcd
+  NEXT_PUBLIC_TARGET_CHAIN_ID=42
+  NEXT_PUBLIC_HAT_ID=746
+  NEXT_PUBLIC_RECIPIENT_ID=0x51551EBfE65CCcE40DC5C4664E4b2b475B018dBB
+  ```
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
+3. Install the dependencies
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+   ```sh
+   cd rcovid.xyz
+   yarn
+   ```
 
-## Notes
+4. Start the development server
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+   ```sh
+   yarn dev
+   ```
 
-```
-npm install --save-dev typescript
-```
+## 🚁 Contributing
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+Feel free to contribute and suggest any improvements.
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
+This repository is a full source of the website created using Next.js, Ethers.js, TypeScript and React.
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
