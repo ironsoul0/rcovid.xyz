@@ -1,6 +1,6 @@
 import { useEthers } from "@usedapp/core";
 import { utils } from "ethers";
-import React, { FC, useEffect, useMemo, useState } from "react";
+import React, { FC, useMemo, useState } from "react";
 
 import { useAllowance } from "./useAllowance";
 import { useStake } from "./useStake";
