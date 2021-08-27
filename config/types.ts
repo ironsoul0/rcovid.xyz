@@ -1,5 +1,6 @@
 export type Transfer = {
   from: {
+    hat: { id: string } | null;
     id: string;
   };
   to: {

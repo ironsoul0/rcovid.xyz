@@ -12,9 +12,6 @@ export const History: FC<Props> = ({ transfers }: Props) => {
     );
   }, [transfers]);
 
-  console.log("transfers", transfers);
-  console.log("ourTransfers", ourTransfers);
-
   return (
     <div className="mb-10">
       <p className="mt-20 mb-4 text-2xl font-bold text-white-900">

@@ -30,6 +30,9 @@ export async function getStaticProps() {
           }
           from {
             id
+            hat {
+              id
+            }
           }
           to {
             id
@@ -40,6 +43,7 @@ export async function getStaticProps() {
         }
       }
     `,
+    fetchPolicy: "no-cache",
   });
 
   return {
