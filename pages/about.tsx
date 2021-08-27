@@ -1,6 +1,3 @@
-import { gql } from "@apollo/client";
-import client from "apollo-client";
-import { Donate, Hero, History } from "components";
 import React from "react";
 
 const AboutPage = () => {
