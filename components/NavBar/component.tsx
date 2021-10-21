@@ -53,7 +53,7 @@ export const NavBar: FC<Props> = ({ className }: Props) => {
         >
           {account
             ? invalidChainId
-              ? "Invalid chain"
+              ? "Invalid chain, use Kovan"
               : strippedAccountAddress
             : "Connect account"}
         </button>
